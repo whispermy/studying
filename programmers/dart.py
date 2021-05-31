@@ -1,5 +1,6 @@
 def cal(st):
-    i = int(st[0])
+    # print(st)
+    i = st[0]
     if st[1] == 'S':
         return i
     if st[1] == 'D':
@@ -14,7 +15,7 @@ def solution(dartResult):
     second = 0
     third = 0
     
-    for i in range (0,len(dartResult)):
+    for i in range (2,len(dartResult)):
         if dartResult[i] == '2':
             if dartResult[i-1] == '*':
                 first = cal(dartResult[:i-2]) * 2
